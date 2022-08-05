@@ -1,0 +1,49 @@
+.inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 20%;
+    
+    height: 100%;
+    width: 100%;
+
+    background-image: url("/public/assets/Ilustração-1.png");
+    background-repeat: no-repeat;
+    background-position: 50% 108%;
+    background-size auto;
+}
+
+.logo {
+    margin-bottom: 3rem;
+}
+
+.titulo {
+    margin-bottom: 3rem;
+
+    font-size: 1.625rem;
+    font-weight: 500;
+}
+
+.texto {
+    margin-bottom: 1.5rem;
+    
+    width: 15.5rem;
+
+    text-align: center;
+
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+:global(.button):not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.loginButton {
+
+}
+
+.cadastroButton {
+
+}

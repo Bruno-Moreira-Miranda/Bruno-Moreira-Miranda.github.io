@@ -1,0 +1,15 @@
+#header {
+
+}
+
+.header_nav {
+    display: flex;
+    align-items: center;
+    column-gap: 3.625rem;
+    
+    margin-top: 2.5rem;
+}
+
+.header_nav :last-child {
+    margin-left: auto;
+}

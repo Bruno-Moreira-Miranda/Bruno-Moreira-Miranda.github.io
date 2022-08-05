@@ -1,0 +1,18 @@
+:global(.button) {
+    display: inline-block;
+
+    width: 8.5rem;
+    padding: 1rem .5rem;
+
+    background-color: #FC7071;
+
+    border-radius: 6px;
+
+    text-align: center;
+    font-weight: 600;
+}
+
+/*Modificadores*/
+:global(.button_m) {
+    width: 11.25rem;
+}

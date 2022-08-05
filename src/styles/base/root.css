@@ -1,2 +1,22 @@
-@import url(reset.css);
+@import url(_reset.css);
+@import url(_tipography.css);
 @import url(_vars.css);
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    display: grid;
+
+    background-color: var(--cor-primaria);
+    color: rgb(255, 255, 255);
+
+    background-image: 
+    url(/public/assets/forma-1.png),
+    url(/public/assets/forma-2.png),
+    url(/public/assets/forma-3.png);
+    background-repeat: no-repeat;
+    background-position: top left, top left, center right;
+
+}
