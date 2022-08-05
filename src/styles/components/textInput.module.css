@@ -1,0 +1,60 @@
+:global(.inputText) {
+    /*vars*/
+    --input-h-padding: 5%;
+
+    --input-index: 1;
+    --placeholder-index: calc(var(--input-index) + 1);
+    /*end/vars*/
+
+    display: grid;
+    grid-template-areas: 
+    "label"
+    "input";
+    grid-template-rows: auto 2.5rem;
+    align-items: center;
+}
+
+/*2 ou mais items associados a uma mesma grid-area perdem seu flow(não reconhecem os limites "fisicos" de seus irmões)*/
+
+:global(.inputText_label) {
+    grid-area: label;
+
+    margin-bottom: .8125rem;
+
+    text-align: center;
+
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--cor-terciaria);
+}
+
+:global(.inputText_placeholder) {
+    grid-area: input;
+
+    text-align: center;
+
+    padding-left: var(--input-h-padding);
+    padding-right: var(--input-h-padding);
+
+    font-size: .75rem;
+    font-weight: 400;
+    color: rgb(188, 188, 188) ;
+
+    z-index: var(--placeholder-index);
+}
+
+:global(.inputText_input) {
+    grid-area: input;
+
+    height: 100%;
+    width: 100%;
+
+    padding-left: var(--input-h-padding);
+    padding-right: var(--input-h-padding);
+
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .15);
+    border-radius: 6px;
+    background-color: rgb(247, 247, 247);
+
+    z-index: var(--input-index);
+}
