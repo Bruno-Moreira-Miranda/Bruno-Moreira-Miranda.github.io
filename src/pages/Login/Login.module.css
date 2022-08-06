@@ -1,4 +1,4 @@
-@import "/src/styles/base/backgrounds/_bg-1.css";
+@import "/src/styles/common/backgrounds/_bg-1.css";
 
 .login {
     display: grid;
@@ -13,10 +13,6 @@
 }
 
 .texto {
-    color: var(--cor-primaria);
-
-    text-align: center;
-
     margin-bottom: 2.75rem;
 }
 

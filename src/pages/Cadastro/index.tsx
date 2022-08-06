@@ -5,6 +5,7 @@ import { TextInput } from "components/UI/Inputs";
 import Logo from "components/UI/Logo";
 
 import "styles/common/container.module.css";
+import "styles/common/texto.module.css";
 import styles from "./Cadastro.module.css";
 
 function Cadastro() {
@@ -12,10 +13,10 @@ function Cadastro() {
         <main className={classNames(styles.cadastro, "container", "main-v-padding")}>
             <Logo className={styles.logo} type="azul" />
 
-            <p className={styles.texto}>
+            <h1 className={classNames(styles.texto, "texto-primario", "texto-center")}>
                 <em>Ainda não tem cadastro?</em>
                 <span></span> Então, antes de buscar seu melhor amigo, precisamos de alguns dados:
-            </p>
+            </h1>
 
             <form className={styles.formulario}>
                 <TextInput

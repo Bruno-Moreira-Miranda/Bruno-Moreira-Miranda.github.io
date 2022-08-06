@@ -6,6 +6,7 @@ import { TextInput } from "components/UI/Inputs";
 import Button from "components/UI/Buttons";
 
 import "styles/common/container.module.css";
+import "styles/common/texto.module.css";
 import styles from "./Login.module.css";
 
 function Login() {
@@ -13,9 +14,9 @@ function Login() {
         <main className={classNames(styles.login, "container", "main-v-padding")}>
             <Logo className={styles.logo} type="azul" />
 
-            <p className={styles.texto}>
+            <h1 className={classNames(styles.texto, "texto-primario", "texto-center")}>
                 Já tem conta? Faça seu login:
-            </p>
+            </h1>
 
             <form className={styles.formulario}>
                 <TextInput

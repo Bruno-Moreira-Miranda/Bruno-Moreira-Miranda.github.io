@@ -7,3 +7,11 @@
     padding-top: 20%;
     padding-bottom: 20%;
 }
+
+:global(.main-v-padding-top) {
+    padding-top: 20%;
+}
+
+:global(.main-v-padding-bottom) {
+    padding-bottom: 20%;
+}
