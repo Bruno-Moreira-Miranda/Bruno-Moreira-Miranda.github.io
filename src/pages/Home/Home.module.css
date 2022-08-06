@@ -69,9 +69,7 @@
 
 .card_contato__link {
     display: flex;
-    align-items: center;
-
-    height: 1.75rem;
+    align-items: flex-start;
 
     font-size: .625rem;
 }
