@@ -1,9 +1,13 @@
 :global(.inputText) {
     /*vars*/
-    --input-h-padding: 5%;
+    --input-h-padding-left: 1.5rem;
+    --input-h-padding-right: 2.5rem;
 
     --input-index: 1;
     --placeholder-index: calc(var(--input-index) + 1);
+    --showText-index: var(--placeholder-index);
+
+    --input-text-size: .75rem;
     /*end/vars*/
 
     display: grid;
@@ -19,12 +23,11 @@
 :global(.inputText_label) {
     grid-area: label;
 
-    margin-bottom: .8125rem;
+    margin-bottom: .5rem;
 
     text-align: center;
 
     font-size: 1rem;
-    font-weight: 400;
     color: var(--cor-terciaria);
 }
 
@@ -33,14 +36,22 @@
 
     text-align: center;
 
-    padding-left: var(--input-h-padding);
-    padding-right: var(--input-h-padding);
+    padding-left: var(--input-h-padding-left);
+    padding-right: var(--input-h-padding-right);
 
-    font-size: .75rem;
-    font-weight: 400;
+    font-size: var(--input-text-size);
     color: rgb(188, 188, 188) ;
 
     z-index: var(--placeholder-index);
+}
+
+:global(.inputText_showText) {
+    grid-area: input;
+
+    margin-left: auto;
+    transform: translateX(-50%);
+
+    z-index: var(--showText-index);
 }
 
 :global(.inputText_input) {
@@ -49,12 +60,21 @@
     height: 100%;
     width: 100%;
 
-    padding-left: var(--input-h-padding);
-    padding-right: var(--input-h-padding);
+    padding-left: var(--input-h-padding-left);
+    padding-right: var(--input-h-padding-right);
 
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .15);
     border-radius: 6px;
     background-color: rgb(247, 247, 247);
 
+    font-size: var(--input-text-size);
+    color: rgb(133, 133, 133);
+
     z-index: var(--input-index);
+}
+
+/*É necessario que o input tenha uma real placeholder(só preencher com um white-space)*/
+/*É necessario que o input venha antes do "placholder artificial"*/
+:global(.inputText_input):not(:placeholder-shown) + :global(.inputText_placeholder) {
+    visibility: hidden;
 }

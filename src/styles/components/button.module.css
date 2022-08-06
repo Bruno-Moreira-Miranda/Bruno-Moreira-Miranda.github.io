@@ -10,6 +10,14 @@
 
     text-align: center;
     font-weight: 600;
+
+    transition: .2s ease-in;
+}
+
+:global(.button):hover {
+    background-color: rgb(255, 157, 158);
+
+    transition: .4s ease-out;
 }
 
 /*Modificadores*/

@@ -1,0 +1,36 @@
+@import url(/src/styles/base/backgrounds/_bg-1.css);
+
+.cadastro {
+    display: grid;
+}
+
+.cadastro > *:not(.formulario) {
+    justify-self: center;
+}
+
+.logo {
+    margin-bottom: 1.5rem;
+}
+
+.texto {
+    margin-bottom: 1.5rem;
+
+    text-align: center;
+
+    color: var(--cor-primaria);
+}
+
+.texto :first-child {
+    display: block;
+
+    margin-bottom: .5rem;
+}
+
+.formulario {
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.cadastroButton {
+    justify-self: center;
+}

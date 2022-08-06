@@ -7,7 +7,7 @@ import styles from "./Header.module.css";
 
 function Header() {
     return (
-        <header className="container" id={styles.header}>
+        <header className={styles.header}>
             <nav className={styles.header_nav}>
                 <HomeButton />
                 <ContatoButton />

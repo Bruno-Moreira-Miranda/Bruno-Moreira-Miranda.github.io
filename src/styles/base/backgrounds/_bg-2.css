@@ -1,0 +1,10 @@
+body {
+    background-image:
+        url(/public/assets/forma-1.png),
+        url(/public/assets/forma-2.png),
+        url(/public/assets/forma-3.png);
+    background-repeat: no-repeat;
+    background-position: top left, top left, center right;
+
+    background-color: var(--cor-primaria);
+}

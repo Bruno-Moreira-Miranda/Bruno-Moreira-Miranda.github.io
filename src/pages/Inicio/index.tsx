@@ -12,7 +12,7 @@ import AppRoutes from "components/root/Routes/AppRoutes";
 
 function Inicio() {
     return (
-        <main className={classNames(styles.inicio, "container")}>
+        <main className={classNames(styles.inicio, "container", "main-v-padding")}>
             <Logo className={styles.logo} />
 
             <h1 className={styles.titulo}><em>Boas-vindas!</em></h1>

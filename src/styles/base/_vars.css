@@ -1,5 +1,10 @@
 :root {
+    /*Cores*/
     --cor-primaria: rgb(55, 114, 255);
     --cor-secundaria: rgb(54, 214, 173);
     --cor-terciaria: rgb(115, 115, 128);
+
+    /*Fonts*/
+    --font-primaria: 'Poppins', Helvetica, sans-serif;
+    --font-secundaria: 'IBM Plex Sans', Helvetica, sans-serif;
 }

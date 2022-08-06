@@ -1,10 +1,10 @@
+@import url(/src/styles/base/backgrounds/_bg-2.css);
+
 .inicio {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    padding-top: 20%;
-    
     height: 100%;
     width: 100%;
 
@@ -21,6 +21,7 @@
 .titulo {
     margin-bottom: 3rem;
 
+    font-family: var(--font-secundaria);
     font-size: 1.625rem;
     font-weight: 500;
 }
@@ -33,7 +34,6 @@
     text-align: center;
 
     line-height: 1.5rem;
-    font-weight: 400;
 }
 
 :global(.button):not(:last-child) {

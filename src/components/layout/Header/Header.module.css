@@ -1,5 +1,6 @@
-#header {
-
+.header {
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .header_nav {

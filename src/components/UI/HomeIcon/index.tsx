@@ -1,9 +1,13 @@
-import homeIconPath from "assets/imagens/casa-icon.png";
+import iconPath from "assets/imagens/casa-icon.png";
+import { HTMLAttributes } from "react";
 
-function HomeIcon() {
+type Props = HTMLAttributes<HTMLDivElement>;
+
+function HomeIcon({ className }: Props) {
     return (
         <img
-            src={homeIconPath}
+            className={className}
+            src={iconPath}
             alt="Home" />
     );
 }
