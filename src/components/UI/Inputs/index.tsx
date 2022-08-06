@@ -17,7 +17,7 @@ function TextInput({ className, type, id, labelText, placeholder, ...rest }: Pro
     const typeImplementacao = {
         text: () => null,
         email: () => null,
-        password: () => <Toggle className="inputText_showText" id={`toggle-${id}`} type="visibilidade" />,
+        password: () => <Toggle className="inputText_showText" id={`toggle-${id}`} type="visibilidade" title="Mostrar senha" />,
         url: () => null,
         search: () => null
     };

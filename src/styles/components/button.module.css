@@ -4,7 +4,7 @@
     width: 8.5rem;
     padding: 1rem .5rem;
 
-    background-color: #FC7071;
+    background-color: var(--cor-quartenaria);
 
     border-radius: 6px;
 
