@@ -1,5 +1,4 @@
-import classNames from "classnames";
-import Button from "components/UI/Buttons";
+import classNames from "classnames"; import Button from "components/UI/Buttons";
 import { Textarea, TextInput } from "components/UI/Inputs";
 
 import "styles/common/container.module.css";
@@ -9,7 +8,7 @@ import styles from "./Contato.module.css";
 function Contato() {
     return (
         <main className={classNames(styles.contato, "container", "main-v-padding-top", "main-v-padding-bottom-primario")}>
-            <h1 className={classNames(styles.texto, "texto", "texto-primario", "texto-center")}>
+            <h1 className={classNames(styles.texto, "texto-primario", "texto-center")}>
                 Envie uma mensagem para a pessoa ou instituição que está cuidando do animal:
             </h1>
 

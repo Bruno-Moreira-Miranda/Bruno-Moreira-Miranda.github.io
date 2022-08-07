@@ -1,0 +1,33 @@
+:global(.perfil_img_input) {
+    display: grid;
+    row-gap: .625rem;
+}
+
+:global(.perfil_img_input) > *:not(.perfil_input_label) {
+    justify-self: center;
+}
+
+.perfil_input_label {
+    font-weight: 600;
+    color: var(--cor-primaria);    
+}
+
+.perfil_input_container {
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 100%;
+}
+
+.perfil_input_container img {
+    height: 100%;
+    width: 100%;
+
+    border-radius: inherit;
+}
+
+.perfil_input_texto {
+    font-size: .75rem;
+
+    color: var(--cor-quartenaria);
+}

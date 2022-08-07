@@ -1,0 +1,43 @@
+@import "/src/styles/common/backgrounds/_bg-3.css";
+
+.perfil {
+    display: grid;
+}
+
+.texto {
+    margin-bottom: 1.5rem;
+
+    justify-self: center;
+
+    width: 15.25rem;
+}
+
+.formulario {
+    display: grid;
+
+    padding: 2rem 1rem;
+
+    border-radius: 10px;
+
+    background-color: var(--cor-quinaria);
+}
+
+:global(.perfil_input) {
+    margin-bottom: .5rem;
+}
+
+.formulario__titulo {
+    margin-bottom: 1rem;
+    
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+}
+
+.formulario :global(.inputText) {
+    margin-bottom: 1rem;
+}
+
+.formulario > *:not(:global(.inputText), :global(.perfil_img_input)) {
+    justify-self: center;
+}

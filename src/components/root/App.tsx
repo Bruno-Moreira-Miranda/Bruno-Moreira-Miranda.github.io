@@ -1,9 +1,9 @@
-import Contato from "pages/Contato";
+import Perfil from "pages/Perfil";
 
 function App() {
     return (
         <>
-            <Contato />
+            <Perfil />
         </>
     );
 }

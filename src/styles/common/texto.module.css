@@ -1,7 +1,7 @@
 :global(.texto-primario) {
     color: var(--cor-primaria);
 
-    line-height: 1.75rem;
+    line-height: 1.25rem;
 }
 
 :global(.texto-left) {

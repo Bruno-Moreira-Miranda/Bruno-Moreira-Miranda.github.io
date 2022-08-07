@@ -1,0 +1,17 @@
+.ivisivel_render {
+    display: none;
+}
+
+.invisivel_eye {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    height: 1px;
+    width: 1px;
+    min-width: unset;
+    min-height: unset;
+    position: absolute;
+    overflow: hidden;
+    opacity: .1;
+}
