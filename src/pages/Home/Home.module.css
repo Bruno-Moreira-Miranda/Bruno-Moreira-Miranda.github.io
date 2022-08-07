@@ -24,9 +24,9 @@
 
     padding: 1rem 1.5rem;
 
-    background-color: rgb(246, 246, 246);
+    background-color: var(--cor-quinaria);
 
-    color: rgb(115, 115, 128);
+    color: var(--cor-hexanaria);
 }
 
 .card_image {

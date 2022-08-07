@@ -15,3 +15,15 @@
 :global(.main-v-padding-bottom) {
     padding-bottom: 20%;
 }
+
+:global(.main-v-padding-primario) {
+    padding: 1rem;
+}
+
+:global(.main-v-padding-top-primario) {
+    padding-top: 1rem;
+}
+
+:global(.main-v-padding-bottom-primario) {
+    padding-bottom: 1rem;
+}

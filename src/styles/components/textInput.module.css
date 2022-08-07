@@ -1,25 +1,24 @@
 :global(.inputText) {
-    /*vars*/
-    --input-h-padding-left: 1.5rem;
-    --input-h-padding-right: 2.5rem;
+    --input-padding-left: 1rem;
+    --input-padding-right: 1rem;
+    --input-padding-top: 1rem;
+    --input-padding-bottom: 1rem;
 
     --input-index: 1;
     --placeholder-index: calc(var(--input-index) + 1);
-    --showText-index: var(--placeholder-index);
 
     --input-text-size: .75rem;
-    /*end/vars*/
+}
 
+:global(.inputText) {
     display: grid;
-    grid-template-areas: 
-    "label"
-    "input";
-    grid-template-rows: auto 2.5rem;
-    align-items: center;
+    grid-template-areas:
+        "label"
+        "input";
+        justify-items: flex-start;
 }
 
 /*2 ou mais items associados a uma mesma grid-area perdem seu flow(não reconhecem os limites "fisicos" de seus irmões)*/
-
 :global(.inputText_label) {
     grid-area: label;
 
@@ -36,22 +35,15 @@
 
     text-align: center;
 
-    padding-left: var(--input-h-padding-left);
-    padding-right: var(--input-h-padding-right);
+    padding-left: var(--input-padding-left);
+    padding-right: var(--input-padding-right);
+    padding-top: var(--input-padding-top);
+    padding-bottom: var(--input-padding-bottom);
 
     font-size: var(--input-text-size);
-    color: rgb(188, 188, 188) ;
+    color: rgb(188, 188, 188);
 
     z-index: var(--placeholder-index);
-}
-
-:global(.inputText_showText) {
-    grid-area: input;
-
-    margin-left: auto;
-    transform: translateX(-50%);
-
-    z-index: var(--showText-index);
 }
 
 :global(.inputText_input) {
@@ -60,21 +52,69 @@
     height: 100%;
     width: 100%;
 
-    padding-left: var(--input-h-padding-left);
-    padding-right: var(--input-h-padding-right);
+    padding-left: var(--input-padding-left);
+    padding-right: var(--input-padding-right);
+    padding-top: var(--input-padding-top);
+    padding-bottom: var(--input-padding-bottom);
 
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .15);
     border-radius: 6px;
     background-color: rgb(247, 247, 247);
 
     font-size: var(--input-text-size);
-    color: rgb(133, 133, 133);
+    color: var(--cor-hexanaria);
 
     z-index: var(--input-index);
 }
 
 /*É necessario que o input tenha uma real placeholder(só preencher com um white-space)*/
 /*É necessario que o input venha antes do "placholder artificial"*/
-:global(.inputText_input):not(:placeholder-shown) + :global(.inputText_placeholder) {
+:global(.inputText_input):not(:placeholder-shown)+ :global(.inputText_placeholder) {
     visibility: hidden;
+}
+
+/*password*/
+:global(.inputText.password) {
+    --input-padding-right: 2.5rem
+}
+
+:global(.inputText .password__show) {
+    grid-area: input;
+
+    align-self: center;
+
+    margin-left: auto;
+    transform: translateX(-50%);
+
+    z-index: calc(var(--placeholder-index) + 1);
+}
+
+/*textarea*/
+:global(.textarea .inputText_label) {
+    margin-bottom: 1rem;
+}
+
+:global(.textarea textarea) {
+    resize: vertical;
+    min-height: 5.5rem;
+}
+
+:global(.textarea .inputText_placeholder) {
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+/*style sets*/
+
+:global(.primario) {
+    --input-text-size: .875rem
+}
+
+:global(.primario .inputText_label) {
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+:global(.primario .inputText_input) {
+    background-color: rgb(255, 255, 255);
 }

@@ -1,0 +1,44 @@
+@import "/src/styles/common/backgrounds/_bg-3.css";
+
+.contato {
+    display: grid;
+}
+
+.texto {
+    justify-self: center;
+
+    margin-bottom: 1.5rem;
+
+    width: 16.625rem;
+}
+
+.formulario {
+    display: grid;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2rem;
+
+    border-radius: 10px;
+
+    background-color: var(--cor-quinaria);
+}
+
+.formulario > *:not(:global(.inputText)) {
+    justify-self: center;
+}
+
+.formulario :global(.inputText) {
+    margin-bottom: 1rem;
+}
+
+.formulario textarea {
+    height: 10.5rem;
+
+    max-height: 18rem;
+}
+
+.submitButton {
+    margin-bottom: 2rem;
+}
