@@ -3,6 +3,7 @@
     padding-right: 1.5rem;
 }
 
+/*main-padding*/
 :global(.main-v-padding) {
     padding-top: 20%;
     padding-bottom: 20%;
@@ -16,6 +17,7 @@
     padding-bottom: 20%;
 }
 
+/*main-padding-primario*/
 :global(.main-v-padding-primario) {
     padding: 1rem;
 }
@@ -26,4 +28,35 @@
 
 :global(.main-v-padding-bottom-primario) {
     padding-bottom: 1rem;
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+
+    /*main-padding*/
+    :global(.main-v-padding) {
+        padding-top: 25%;
+        padding-bottom: 25%;
+    }
+
+    :global(.main-v-padding-top) {
+        padding-top: 25%;
+    }
+
+    :global(.main-v-padding-bottom) {
+        padding-bottom: 25%;
+    }
+
+    /*main-padding-primario*/
+    :global(.main-v-padding-primario) {
+        padding: 2rem;
+    }
+
+    :global(.main-v-padding-top-primario) {
+        padding-top: 2rem;
+    }
+
+    :global(.main-v-padding-bottom-primario) {
+        padding-bottom: 2rem;
+    }
 }

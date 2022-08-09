@@ -14,7 +14,7 @@ function Login() {
         <main className={classNames(styles.login, "container", "main-v-padding")}>
             <Logo className={styles.logo} type="azul" />
 
-            <h1 className={classNames(styles.texto, "texto-primario", "texto-center")}>
+            <h1 className={classNames(styles.titulo, "texto-primario", "texto-center")}>
                 Já tem conta? Faça seu login:
             </h1>
 

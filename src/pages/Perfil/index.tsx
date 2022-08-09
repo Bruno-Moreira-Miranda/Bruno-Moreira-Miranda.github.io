@@ -11,7 +11,7 @@ import Button from "components/UI/Buttons";
 function Perfil() {
     return (
         <main className={classNames(styles.perfil, "container", "main-v-padding-top", "main-v-padding-bottom-primario")}>
-            <h1 className={classNames(styles.texto, "texto-primario", "texto-center")}>
+            <h1 className={classNames(styles.titulo, "texto-primario", "texto-center")}>
                 Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem.
             </h1>
 

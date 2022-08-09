@@ -1,7 +1,8 @@
-@import "/src/styles/common/backgrounds/_bg-1.css";
+@import "/src/styles/common/backgrounds/_bg-4.css";
 
 .login {
     display: grid;
+    align-content: flex-start;
 }
 
 .login > *:not(.formulario) {
@@ -12,7 +13,7 @@
     margin-bottom: 3.5rem;
 }
 
-.texto {
+.titulo {
     margin-bottom: 2.75rem;
 }
 
@@ -43,3 +44,24 @@
 .loginButton {
 
 }
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    .formulario {
+        width: 21.5rem;
+        justify-self: center;
+    }
+
+    .logo, .titulo {
+        margin-bottom: 2.5rem;
+    }
+
+    .formulario :global(.inputText):not(:last-of-type) {
+        margin-bottom: 1.5rem;
+    }
+
+    .recuperarSenha {
+        margin-bottom: 2.5rem;
+    }
+}
+

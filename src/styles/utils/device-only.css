@@ -4,6 +4,7 @@
     }      
 }
 
+/*Tablet-only*/
 @media screen and (max-width: 767px) {
     .tablet_only {
         display: none;
@@ -16,6 +17,7 @@
     }      
 }
 
+/*Quando for tablet*/
 @media screen and (max-width: 767px) {
     .when_tablet_only {
         display: none;

@@ -1,10 +1,14 @@
-@import "/src/styles/common/backgrounds/_bg-3.css";
+@import "/src/styles/common/backgrounds/_bg-2.css";
+
+body {
+    background-color: rgb(255, 255, 255);
+}
 
 .perfil {
     display: grid;
 }
 
-.texto {
+.titulo {
     margin-bottom: 1.5rem;
 
     justify-self: center;
@@ -28,7 +32,7 @@
 
 .formulario__titulo {
     margin-bottom: 1rem;
-    
+
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--cor-terciaria);
@@ -38,6 +42,19 @@
     margin-bottom: 1rem;
 }
 
-.formulario > *:not(:global(.inputText), :global(.perfil_img_input)) {
+.formulario>*:not(:global(.inputText), :global(.perfil_img_input)) {
     justify-self: center;
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    .perfil {
+        grid-template-columns: 32.75rem;
+        justify-content: center;
+    }
+
+    .titulo {
+        width: auto;
+        margin-bottom: 1.625rem;
+    }
 }

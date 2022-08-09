@@ -1,7 +1,5 @@
 import { HTMLAttributes } from "react";
-import classNames from "classnames";
 
-import styles from "./Logo.module.css";
 import logoPath from "assets/imagens/logo.png";
 import logoAzulPath from "assets/imagens/logo-azul.png";
 
@@ -17,9 +15,9 @@ function Logo({ className, type, ...rest }: Props) {
 
     return (
         <img
-            className={classNames(styles.logo, className)}
-            src={type?types[type]:types["default"]}
-            alt="Adopet" 
+            className={className}
+            src={type ? types[type] : types["default"]}
+            alt="Adopet"
             {...rest} />
     );
 }

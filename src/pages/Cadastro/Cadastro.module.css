@@ -1,26 +1,28 @@
-@import "/src/styles/common/backgrounds/_bg-1.css";
+@import "/src/styles/common/backgrounds/_bg-4.css";
 
 .cadastro {
     display: grid;
+    grid-template-columns: 32.8rem;
+    justify-content: center;
+    align-content: flex-start;
+    justify-items: center;
 }
 
 .cadastro > *:not(.formulario) {
     justify-self: center;
 }
 
-.logo {
+.logo, .titulo {
     margin-bottom: 1.5rem;
 }
 
-.texto {
-    margin-bottom: 1.5rem;
-
+.titulo {
     text-align: center;
 
     color: var(--cor-primaria);
 }
 
-.texto :first-child {
+.titulo :first-child {
     display: block;
 
     margin-bottom: .5rem;
@@ -28,9 +30,37 @@
 
 .formulario {
     display: grid;
-    row-gap: 1.5rem;
+}
+
+.formulario :global(.inputText):not(:last-of-type) {
+    margin-bottom: 1.25rem;
+}
+
+.formulario :global(.inputText):last-of-type {
+    margin-bottom: 1.5rem;
 }
 
 .cadastroButton {
     justify-self: center;
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    .logo, .titulo {
+        margin-bottom: 2.5rem;
+    }
+
+    .formulario {
+        justify-self: center;
+        
+        width: 21.5rem;
+    }
+
+    .formulario :global(.inputText):not(:last-of-type) {
+        margin-bottom: 1.5rem;
+    }
+
+    .formulario :global(.inputText):last-of-type {
+        margin-bottom: 2.5rem;
+    }
 }

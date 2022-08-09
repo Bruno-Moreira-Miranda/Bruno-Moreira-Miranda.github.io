@@ -1,10 +1,15 @@
-@import "/src/styles/common/backgrounds/_bg-3.css";
+@import "/src/styles/common/backgrounds/_bg-2.css";
+
+body {
+    background-color: rgb(255, 255, 255);
+}
 
 .contato {
     display: grid;
+    align-content: flex-start;
 }
 
-.texto {
+.titulo {
     justify-self: center;
 
     margin-bottom: 1.5rem;
@@ -25,7 +30,7 @@
     background-color: var(--cor-quinaria);
 }
 
-.formulario > *:not(:global(.inputText)) {
+.formulario>*:not(:global(.inputText)) {
     justify-self: center;
 }
 
@@ -41,4 +46,20 @@
 
 .submitButton {
     margin-bottom: 2rem;
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    .contato {
+        grid-template-columns: 32.75rem;
+        justify-content: center;
+    }
+
+    .titulo {
+        margin-bottom: 2.5rem;
+    }
+
+    .titulo {
+        width: auto;
+    }
 }

@@ -13,7 +13,7 @@ function Cadastro() {
         <main className={classNames(styles.cadastro, "container", "main-v-padding")}>
             <Logo className={styles.logo} type="azul" />
 
-            <h1 className={classNames(styles.texto, "texto-primario", "texto-center")}>
+            <h1 className={classNames(styles.titulo, "texto-primario", "texto-center")}>
                 <em>Ainda não tem cadastro?</em>
                 <span></span> Então, antes de buscar seu melhor amigo, precisamos de alguns dados:
             </h1>

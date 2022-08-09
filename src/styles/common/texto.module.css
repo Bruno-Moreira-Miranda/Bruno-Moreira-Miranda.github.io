@@ -4,6 +4,7 @@
     line-height: 1.25rem;
 }
 
+/*text-position*/
 :global(.texto-left) {
     text-align: left;
 }
@@ -14,4 +15,13 @@
 
 :global(.texto-center) {
     text-align: center;
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    :global(.texto-primario) {
+        line-height: 1.75rem;
+        
+        font-size: 1.25rem;
+    }
 }

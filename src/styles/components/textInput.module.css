@@ -121,3 +121,14 @@
 :global(.primario .inputText_input) {
     background-color: rgb(255, 255, 255);
 }
+
+/*Tablet*/
+@media screen and (min-width: .875rem) {
+    :global(.inputText) {
+        --input-text-size: .875rem;
+    }
+
+    :global(.inputText_label) {
+        font-size: 1.125rem;
+    }
+}
