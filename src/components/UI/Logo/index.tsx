@@ -18,7 +18,7 @@ function Logo({ className, type, ...rest }: Props) {
     return (
         <img
             className={classNames(styles.logo, className)}
-            src={type?types[type]:"default"}
+            src={type?types[type]:types["default"]}
             alt="Adopet" 
             {...rest} />
     );

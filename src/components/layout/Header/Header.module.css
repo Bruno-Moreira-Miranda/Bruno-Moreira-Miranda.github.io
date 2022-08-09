@@ -11,6 +11,11 @@
     margin-top: 2.5rem;
 }
 
+.header_nav ul {
+    display: inline-flex;
+    column-gap: 3.625rem;
+}
+
 .header_nav :last-child {
     margin-left: auto;
 }

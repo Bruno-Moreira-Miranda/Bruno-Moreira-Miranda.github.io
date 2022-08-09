@@ -1,10 +1,24 @@
 body {
+    --bg-1-img-path: url("/public/assets/forma-1.png");
+    --bg-2-img-path: url("/public/assets/forma-2.png");
+    --bg-3-img-path: url("/public/assets/forma-3.png");
+}
+
+body {
     background-image:
-        url(/public/assets/forma-1.png),
-        url(/public/assets/forma-2.png),
-        url(/public/assets/forma-3.png);
+        var(--bg-1-img-path),
+        var(--bg-2-img-path),
+        var(--bg-3-img-path);
     background-repeat: no-repeat;
     background-position: top left, top left, center right;
 
     background-color: var(--cor-primaria);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        --bg-1-img-path: url("/public/assets/forma-1-tablet.png");
+        --bg-2-img-path: url("/public/assets/forma-2-tablet.png");
+        --bg-3-img-path: url("/public/assets/forma-3-tablet.png");
+    }
 }

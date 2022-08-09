@@ -1,9 +1,11 @@
-import "styles/container.module.css";
+import classNames from "classnames";
+
+import "styles/common/container.module.css";
 import styles from "./Footer.module.css";
 
 function Footer() {
     return (
-        <footer className="container" id={styles.footer}>
+        <footer className={classNames(styles.footer, "container")}>
             <p>2022 - Desenvolvido Por Alura.</p>
         </footer>
     );

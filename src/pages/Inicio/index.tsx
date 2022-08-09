@@ -3,7 +3,8 @@ import classNames from "classnames";
 
 import Logo from "components/UI/Logo";
 
-import "styles/container.module.css";
+import "styles/utils/device-only.css";
+import "styles/common/container.module.css";
 import "styles/components/button.module.css";
 
 import styles from "./Inicio.module.css";
@@ -17,7 +18,13 @@ function Inicio() {
 
             <h1 className={styles.titulo}><em>Boas-vindas!</em></h1>
 
-            <p className={styles.texto}>Que tal mudar sua vida <strong>adotando</strong> seu novo melhor amigo? Vem com a gente!</p>
+            <p className={classNames(styles.texto, "mobile_only")}>
+                Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!
+            </p>
+
+            <p className={classNames(styles.texto, "tablet_only")}>
+                Adotar pode mudar uma vida. Que tal buscar seu novo melhor amigo hoje? Vem com a gente!
+            </p>
 
             <Link
                 className={classNames(styles.loginButton, "button", "button_m")}
@@ -25,6 +32,7 @@ function Inicio() {
                 role="button">
                 Já tenho conta
             </Link>
+            
             <Link
                 className={classNames(styles.cadastrarButton, "button", "button_m")}
                 to={AppRoutes.cadastro}

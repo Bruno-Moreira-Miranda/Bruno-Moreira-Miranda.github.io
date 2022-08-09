@@ -15,7 +15,10 @@
     grid-template-areas:
         "label"
         "input";
-        justify-items: flex-start;
+}
+
+:global(.inputText.primario) {
+    justify-items: flex-start;
 }
 
 /*2 ou mais items associados a uma mesma grid-area perdem seu flow(não reconhecem os limites "fisicos" de seus irmões)*/

@@ -1,8 +1,10 @@
 :global(.button) {
     display: inline-block;
 
-    width: 8.5rem;
-    padding: 1rem .5rem;
+    min-width: 8.5rem;
+    width: fit-content;
+
+    padding: .75rem;
 
     background-color: var(--cor-quartenaria);
 
@@ -22,5 +24,18 @@
 
 /*Modificadores*/
 :global(.button_m) {
-    width: 11.25rem;
+    min-width: 11.25rem;
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    :global(.button) {
+        font-size: 1.125rem;
+    }
+
+    :global(.button_m) {
+        padding: 1rem;
+
+        min-width: 21.5rem;
+    }
 }

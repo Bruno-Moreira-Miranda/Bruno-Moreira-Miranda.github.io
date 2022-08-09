@@ -2,10 +2,12 @@
 @import url(_vars.css);
 @import url(_tipography.css);
 
-html, body {
+html, body, #root {
     min-height: 100vh;
 }
 
-body {
+#root {
     display: grid;
+    grid-template-rows: auto 1fr auto;
+    place-items: stretch;
 }
