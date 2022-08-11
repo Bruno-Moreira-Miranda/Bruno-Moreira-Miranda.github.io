@@ -1,8 +1,9 @@
-@import "/src/styles/common/backgrounds/_bg-2.css";
+@import "styles/common/container.module.css";
+@import "styles/common/texto.module.css";
 
-body {
-    background-color: rgb(255, 255, 255);
-}
+/*Background*/
+@import "/src/styles/common/backgrounds/_bg-3.css";
+/*------*/
 
 .contato {
     display: grid;
@@ -30,12 +31,16 @@ body {
     background-color: var(--cor-quinaria);
 }
 
-.formulario>*:not(:global(.inputText)) {
+.formulario > *:not(:global(.inputText)) {
     justify-self: center;
 }
 
-.formulario :global(.inputText) {
+.formulario > *:not(:global(.inputText):last-of-type) {
     margin-bottom: 1rem;
+}
+
+.formulario :global(.inputText):last-of-type {
+    margin-bottom: 2rem;
 }
 
 .formulario textarea {
@@ -45,10 +50,16 @@ body {
 }
 
 .submitButton {
-    margin-bottom: 2rem;
 }
 
 /*Tablet*/
+/*Background*/
+@import "styles/common/backgrounds/_bg-2.css" screen and (min-width: 768px);
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+/*------*/
 @media screen and (min-width: 768px) {
     .contato {
         grid-template-columns: 32.75rem;
@@ -61,5 +72,16 @@ body {
 
     .titulo {
         width: auto;
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1440px) {
+    .contato {
+        grid-template-columns: 34.5rem;
+    }
+
+    .formulario {
+        padding: 1.875rem 1.625rem;
     }
 }

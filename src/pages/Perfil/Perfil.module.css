@@ -1,11 +1,13 @@
-@import "/src/styles/common/backgrounds/_bg-2.css";
+@import "styles/common/container.module.css";
+@import "styles/common/texto.module.css";
 
-body {
-    background-color: rgb(255, 255, 255);
-}
+/*Background*/
+@import "styles/common/backgrounds/_bg-3.css";
+/*------*/
 
 .perfil {
     display: grid;
+    align-content: flex-start;
 }
 
 .titulo {
@@ -47,6 +49,13 @@ body {
 }
 
 /*Tablet*/
+/*Background*/
+@import "styles/common/backgrounds/_bg-2.css" screen and (min-width: 768px);
+body {
+    background-color: rgb(255, 255, 255);
+}
+/*------*/
+
 @media screen and (min-width: 768px) {
     .perfil {
         grid-template-columns: 32.75rem;
@@ -56,5 +65,16 @@ body {
     .titulo {
         width: auto;
         margin-bottom: 1.625rem;
+    }
+}
+
+/*Desktop*/
+@media screen and(min-width: 1440px) {
+    .perfil {
+        grid-template-columns: 34.5rem;
+    }
+
+    .formulario {
+        padding: 1.875rem 1.625rem;
     }
 }

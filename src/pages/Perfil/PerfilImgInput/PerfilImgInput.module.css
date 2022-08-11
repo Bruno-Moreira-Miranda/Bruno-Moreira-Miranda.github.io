@@ -31,3 +31,9 @@
 
     color: var(--cor-quartenaria);
 }
+
+@media screen and (min-width: 768px) {
+    .perfil_input_label {
+        font-size: 1.125rem;
+    }
+}

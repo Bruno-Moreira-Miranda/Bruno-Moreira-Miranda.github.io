@@ -5,16 +5,10 @@
 }
 
 /*Tablet-only*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) and (min-width: 1440px) {
     .tablet_only {
         display: none;
     }
-}
-
-@media screen and (min-width: 1440px) {
-    .tablet_only {
-        display: none;
-    }      
 }
 
 /*Quando for tablet*/

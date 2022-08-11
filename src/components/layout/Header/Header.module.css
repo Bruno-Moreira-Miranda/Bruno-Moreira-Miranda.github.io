@@ -1,23 +1,41 @@
 .header {
     padding-left: 3rem;
     padding-right: 3rem;
+    margin-top: 3.125rem;
 }
 
 .header_nav {
     display: flex;
     align-items: center;
-    column-gap: 3.625rem;
-    
-    margin-top: 2.5rem;
 }
 
 .header_nav__logo {
+    margin-right: 4rem;
+    
     width: 8.5rem;
 }
 
 .header_nav ul {
     display: inline-flex;
+    align-items: flex-end;
     column-gap: 3.625rem;
+}
+
+
+.header_nav__home {
+    width: 1.18rem;
+}
+
+.header_nav__contato {
+    width: 1.5rem;
+}
+
+.header_nav__home *,
+.header_nav__contato *,
+.header_nav__perfil * {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
 }
 
 .header_nav__perfil {
@@ -28,8 +46,32 @@
 }
 
 @media screen and (min-width: 768px) {
+    .header {
+        margin-top: 4rem;
+    }
+
     .header_nav__perfil {
         width: 3rem;
         height: 3rem;
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1440px) {
+    .header {
+        padding-left: 10rem;
+    }
+
+    .header_nav__logo {
+        margin-right: 3rem;
+    }
+
+    .header_nav ul {
+        column-gap: 2rem;
+    }
+
+    .header_nav__perfil {
+        width: 4rem;
+        height: 4rem;
     }
 }

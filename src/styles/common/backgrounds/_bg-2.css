@@ -2,13 +2,15 @@ body {
     --bg-1-img-path: url("/public/assets/forma-1.png");
     --bg-2-img-path: url("/public/assets/forma-2.png");
     --bg-3-img-path: url("/public/assets/forma-3.png");
-}
-
-body {
-    background-image:
+    --bg-img-path-bundle: 
         var(--bg-1-img-path),
         var(--bg-2-img-path),
         var(--bg-3-img-path);
+}
+
+body {
+    background-image: var(--bg-img-path-bundle);
+        
     background-repeat: no-repeat;
     background-position: top left, top left, center right;
 

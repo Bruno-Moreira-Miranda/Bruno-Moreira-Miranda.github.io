@@ -1,8 +1,8 @@
 :global(.inputText) {
     --input-padding-left: 1rem;
     --input-padding-right: 1rem;
-    --input-padding-top: 1rem;
-    --input-padding-bottom: 1rem;
+    --input-padding-top: .5rem;
+    --input-padding-bottom: .5rem;
 
     --input-index: 1;
     --placeholder-index: calc(var(--input-index) + 1);
@@ -44,7 +44,7 @@
     padding-bottom: var(--input-padding-bottom);
 
     font-size: var(--input-text-size);
-    color: rgb(188, 188, 188);
+    color: var(--cor-hexanaria);
 
     z-index: var(--placeholder-index);
 }
@@ -62,10 +62,10 @@
 
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .15);
     border-radius: 6px;
-    background-color: rgb(247, 247, 247);
+    background-color: var(--cor-quinaria);
 
     font-size: var(--input-text-size);
-    color: var(--cor-hexanaria);
+    color: var(--cor-terciaria);
 
     z-index: var(--input-index);
 }
@@ -108,7 +108,6 @@
 }
 
 /*style sets*/
-
 :global(.primario) {
     --input-text-size: .875rem
 }
@@ -119,7 +118,7 @@
 }
 
 :global(.primario .inputText_input) {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--cor-quinaria);
 }
 
 /*Tablet*/
@@ -130,5 +129,29 @@
 
     :global(.inputText_label) {
         font-size: 1.125rem;
+    }
+
+    :global(.primario .inputText_label) {
+        font-size: 1rem;
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1440px) {
+    :global(.inputText) {
+        --input-text-size: 1rem;
+    }
+
+    :global(.inputText_label) {
+        font-weight: 600;
+    }
+
+    :global(.primario) {
+        --input-padding-left: 1rem;
+        --input-padding-right: 1rem;
+        --input-padding-top: .75rem;
+        --input-padding-bottom: .75rem;
+
+        --input-text-size: .875rem;
     }
 }

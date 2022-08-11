@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 
 import imagemTest from "assets/imagens/dungaLacunga-test.png";
 
-import "styles/common/container.module.css";
-import "styles/common/texto.module.css";
 import styles from "./Home.module.css";
 
 function Home() {
     return (
-        <main className={classNames(styles.home, "main-v-padding-top")}>
+        <main className={classNames(styles.home, "padding-top-main")}>
             <h1 className={classNames(styles.titulo, "texto-primario", "texto-center")}>
                 <span>Olá!</span> Veja os amigos disponíveis para adoção!
             </h1>

@@ -1,18 +1,22 @@
+@import "styles/common/container.module.css";
+@import "styles/common/texto.module.css";
+
+/*Background*/
 @import "/src/styles/common/backgrounds/_bg-4.css";
+/*------*/
 
 .cadastro {
     display: grid;
-    grid-template-columns: 32.8rem;
     justify-content: center;
     align-content: flex-start;
-    justify-items: center;
 }
 
-.cadastro > *:not(.formulario) {
+.cadastro>*:not(.formulario) {
     justify-self: center;
 }
 
-.logo, .titulo {
+.logo,
+.titulo {
     margin-bottom: 1.5rem;
 }
 
@@ -46,14 +50,16 @@
 
 /*Tablet*/
 @media screen and (min-width: 768px) {
-    .logo, .titulo {
+
+    .logo,
+    .titulo {
         margin-bottom: 2.5rem;
     }
 
     .formulario {
-        justify-self: center;
-        
-        width: 21.5rem;
+        grid-template-columns: 21.5rem;
+        justify-content: center;
+        align-content: flex-start;
     }
 
     .formulario :global(.inputText):not(:last-of-type) {
@@ -62,5 +68,33 @@
 
     .formulario :global(.inputText):last-of-type {
         margin-bottom: 2.5rem;
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1440px) {
+    .cadastro {
+        grid-template-columns: 32.625rem;
+    }
+
+    .titulo {
+        margin-bottom: 3rem;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr 21rem 1fr;
+        justify-content: stretch;
+    }
+
+    .formulario>*:not(:global(.password)) {
+        grid-column: 1 / 4;
+    }
+
+    .formulario :global(.password) {
+        grid-column: 2 / 3;
+    }
+
+    .formulario :global(.inputText):last-of-type {
+        margin-bottom: 2rem;
     }
 }

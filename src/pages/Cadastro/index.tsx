@@ -4,13 +4,11 @@ import { TextInput } from "components/UI/Inputs";
 
 import Logo from "components/UI/Logo";
 
-import "styles/common/container.module.css";
-import "styles/common/texto.module.css";
 import styles from "./Cadastro.module.css";
 
 function Cadastro() {
     return (
-        <main className={classNames(styles.cadastro, "container", "main-v-padding")}>
+        <main className={classNames(styles.cadastro, "container-main", "padding-v-main")}>
             <Logo className={styles.logo} type="azul" />
 
             <h1 className={classNames(styles.titulo, "texto-primario", "texto-center")}>

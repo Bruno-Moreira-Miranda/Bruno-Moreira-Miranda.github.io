@@ -51,3 +51,10 @@ body {
         --bg-1-size: 17.25rem;
     }
 }
+
+/*Desktop*/
+@media screen and (min-width: 1440px) {
+    body {
+        --bg-1-size: 19.25rem;
+    }
+}

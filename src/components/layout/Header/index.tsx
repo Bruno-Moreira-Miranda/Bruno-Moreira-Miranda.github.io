@@ -15,10 +15,10 @@ function Header() {
                 <Logo className={classNames(styles.header_nav__logo, "when_tablet_only")} />
 
                 <ul>
-                    <li>
+                    <li className={styles.header_nav__home}>
                         <HomeButton />
                     </li>
-                    <li>
+                    <li className={styles.header_nav__contato}>
                         <ContatoButton />
                     </li>
                 </ul>

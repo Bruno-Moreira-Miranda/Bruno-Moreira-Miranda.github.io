@@ -1,13 +1,30 @@
-@import "/src/styles/common/backgrounds/_bg-3.css";
+@import "styles/common/container.module.css";
+@import "styles/common/texto.module.css";
 
-.home {}
+/*Background*/
+@import "/src/styles/common/backgrounds/_bg-3.css";
+/*------*//*------*/
+
+.home {
+    display: grid;
+    align-content: flex-start;
+}
 
 .titulo {
+    justify-self: center;
+
     margin-bottom: 2rem;
+
+    width: 14.125rem;
+}
+
+.pets_cards {
+    --columns: 1;
 }
 
 .pets_cards {
     display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
     grid-auto-flow: row;
     row-gap: 1rem;
 }
@@ -84,8 +101,15 @@
 
 /*Tablet*/
 @media screen and (min-width: 768px) {
+    .titulo {
+        width: 26.35rem;
+    }
+    
     .pets_cards {
-        grid-template-columns: 1fr 1fr;
+        --columns: 2;
+    }
+    
+    .pets_cards {
         gap: 1rem;
 
         margin-left: 2rem;
@@ -95,5 +119,32 @@
 
     .titulo span {
         display: block;
+    }
+}
+
+/*Desktop*/
+/*Background*/
+@import "/src/styles/common/backgrounds/_bg-2.css" (min-width: 1440px);
+body {
+    background-color: rgb(255, 255, 255);
+}
+/*------*/
+@media screen and (min-width: 1440px) {
+    .home:global(.main-v-padding-top) {
+        padding-top: 6.875rem;
+    }
+
+    .titulo {
+        margin-bottom: 2.5rem;
+    }
+
+    .pets_cards {
+        --columns: 3;
+    }
+
+    .pets_cards {
+        margin-left: 10rem;
+        margin-right: 10rem;
+        margin-bottom: 2.75rem;
     }
 }

@@ -1,4 +1,10 @@
+@import "styles/utils/device-only.css";
+@import "styles/common/container.module.css";
+@import "styles/components/button.module.css";
+
+/*Background*/
 @import "/src/styles/common/backgrounds/_bg-2.css";
+/*------*/
 
 .inicio {
     --grid-container-width: 15.5rem;
@@ -16,7 +22,7 @@
 
     background-image: url("/public/assets/Ilustração-1.png");
     background-repeat: no-repeat;
-    background-position: 50% 104%;
+    background-position: 50% 105%;
     background-size: 15.625rem auto;
 }
 
@@ -73,5 +79,25 @@
         font-size: 1.125rem;
 
         line-height: 1.625rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .inicio {
+        --grid-container-width: 30.5rem;
+    }
+
+    .logo {
+        margin-bottom: 2.4rem;
+    }
+
+    .titulo {
+        margin-bottom: 1.4rem;
+
+        font-size: 1.75rem;
+    }
+
+    .texto {
+        margin-bottom: 2rem;
     }
 }

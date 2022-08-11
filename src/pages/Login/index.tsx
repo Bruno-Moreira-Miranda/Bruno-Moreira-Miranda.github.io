@@ -5,13 +5,11 @@ import Logo from "components/UI/Logo";
 import { TextInput } from "components/UI/Inputs";
 import Button from "components/UI/Buttons";
 
-import "styles/common/container.module.css";
-import "styles/common/texto.module.css";
 import styles from "./Login.module.css";
 
 function Login() {
     return (
-        <main className={classNames(styles.login, "container", "main-v-padding")}>
+        <main className={classNames(styles.login, "container-main", "padding-v-main")}>
             <Logo className={styles.logo} type="azul" />
 
             <h1 className={classNames(styles.titulo, "texto-primario", "texto-center")}>
