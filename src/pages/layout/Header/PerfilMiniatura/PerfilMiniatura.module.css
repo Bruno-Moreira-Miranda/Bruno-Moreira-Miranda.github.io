@@ -1,0 +1,21 @@
+.perfil_miniatura {
+    --border-size: 2px;
+}
+
+.perfil_miniatura {
+    display: inline-block;
+
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 100%;
+    border: var(--border-size) solid var(--cor-secundaria);
+}
+
+.perfil_miniatura :first-child {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    
+    object-fit: cover;
+}

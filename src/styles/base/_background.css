@@ -1,0 +1,6 @@
+body {
+    background-repeat: no-repeat;
+    background-image: var(--bg-img-path-bundle);
+    background-position: var(--bg-pos-bundle);
+    background-size: var(--g-size-bundle);
+}

@@ -16,12 +16,20 @@
     width: 5rem;
     height: 5rem;
 
+    cursor: pointer;
+}
+
+.perfil_img_container {
+    height: 100%;
+    width: 100%;
+
     border-radius: 100%;
 }
 
-.perfil_input_container img {
-    height: 100%;
+.perfil_img_container img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 
     border-radius: inherit;
 }

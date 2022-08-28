@@ -13,6 +13,8 @@
     text-align: center;
     font-weight: 600;
 
+    cursor: pointer;
+
     transition: .2s ease-in;
 }
 

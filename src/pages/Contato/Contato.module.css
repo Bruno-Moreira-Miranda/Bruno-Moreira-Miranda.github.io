@@ -2,7 +2,32 @@
 @import "styles/common/texto.module.css";
 
 /*Background*/
-@import "/src/styles/common/backgrounds/_bg-3.css";
+.contato_bg {
+    --bg-1-img-path: url("/public/assets/imagens/backgrounds/forma-1.png");
+    --bg-2-img-path: url("/public/assets/imagens/backgrounds/forma-2.png");
+    --bg-3-img-path: url("/public/assets/imagens/backgrounds/forma-3-tablet.png");
+
+    --bg-img-path-bundle: 
+        var(--bg-1-img-path),
+        var(--bg-2-img-path);
+    
+    --bg-1-pos: top left;
+    --bg-2-pos: top left;
+    --bg-3-pos: right center;
+
+    --bg-pos-bundle: 
+        var(--bg-1-pos),
+        var(--bg-2-pos);
+}
+
+.contato_bg {
+    background-image: var(--bg-img-path-bundle);
+
+    background-repeat: no-repeat;
+    background-position: var(--bg-pos-bundle);
+    
+    background-color: rgb(255, 255, 255);
+}
 /*------*/
 
 .contato {
@@ -53,14 +78,27 @@
 }
 
 /*Tablet*/
-/*Background*/
-@import "styles/common/backgrounds/_bg-2.css" screen and (min-width: 768px);
-
-body {
-    background-color: rgb(255, 255, 255);
-}
-/*------*/
 @media screen and (min-width: 768px) {
+    /*Background*/
+    .contato_bg {
+        --bg-1-img-path: url("/public/assets/imagens/backgrounds/forma-1-tablet.png");
+        --bg-2-img-path: url("/public/assets/imagens/backgrounds/forma-2-tablet.png");
+
+        --bg-img-path-bundle:
+            var(--bg-1-img-path),
+            var(--bg-2-img-path),
+            var(--bg-3-img-path);
+
+        --bg-pos-bundle: 
+            var(--bg-1-pos),
+            var(--bg-2-pos),
+            var(--bg-3-pos);
+    }
+    /*------*/
+    .contato_bg {
+        background-color: rgb(255, 255, 255);
+    }
+
     .contato {
         grid-template-columns: 32.75rem;
         justify-content: center;

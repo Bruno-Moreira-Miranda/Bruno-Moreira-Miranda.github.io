@@ -3,7 +3,33 @@
 @import "styles/components/button.module.css";
 
 /*Background*/
-@import "/src/styles/common/backgrounds/_bg-2.css";
+.inicio_bg {
+    --bg-1-img-path: url("/public/assets/imagens/backgrounds/forma-1.png");
+    --bg-2-img-path: url("/public/assets/imagens/backgrounds/forma-2.png");
+    --bg-3-img-path: url("/public/assets/imagens/backgrounds/forma-3.png");
+    --bg-img-path-bundle: 
+        var(--bg-1-img-path),
+        var(--bg-2-img-path),
+        var(--bg-3-img-path);
+}
+
+.inicio_bg {
+    background-image: var(--bg-img-path-bundle);
+        
+    background-repeat: no-repeat;
+    background-position: top left, top left, center right;
+
+    background-color: var(--cor-primaria);
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    .inicio_bg {
+        --bg-1-img-path: url("/public/assets/imagens/backgrounds/forma-1-tablet.png");
+        --bg-2-img-path: url("/public/assets/imagens/backgrounds/forma-2-tablet.png");
+        --bg-3-img-path: url("/public/assets/imagens/backgrounds/forma-3-tablet.png");
+    }
+}
 /*------*/
 
 .inicio {
@@ -20,7 +46,7 @@
     height: 100%;
     width: 100%;
 
-    background-image: url("/public/assets/Ilustração-1.png");
+    background-image: url("/public/assets/imagens/backgrounds/Ilustração-1.png");
     background-repeat: no-repeat;
     background-position: 50% 105%;
     background-size: 15.625rem auto;

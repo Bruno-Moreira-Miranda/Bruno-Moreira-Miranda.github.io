@@ -1,11 +1,28 @@
+import { useEffect, useState } from "react";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
 
-import imagemTest from "assets/imagens/dungaLacunga-test.png";
+import useSetTitle from "Hooks/useSetTitle";
+import useSetBodyClass from "Hooks/useSetBodyClass";
+
+import PetCard from "./PetCard";
+
+import { IPet } from "interfaces/i-pet";
+
+import PetsService from "services/pets-service";
 
 import styles from "./Home.module.css";
 
 function Home() {
+    useSetTitle("Home");
+    useSetBodyClass(styles.home_bg);
+
+    const [pets, setPets] = useState<IPet[] | null>(null);
+
+    useEffect(() => {
+        PetsService.buscarTodos()
+            .then(thisPets => setPets(thisPets));
+    }, []);
+
     return (
         <main className={classNames(styles.home, "padding-top-main")}>
             <h1 className={classNames(styles.titulo, "texto-primario", "texto-center")}>
@@ -14,92 +31,20 @@ function Home() {
 
             <section>
                 <ul className={styles.pets_cards}>
-                    <li>
-                        <article className={styles.pet_card}>
-                            <div className={styles.card_image}>
-                                <img src={imagemTest} alt="" />
-                            </div>
-                            <section className={styles.card_infos}>
-                                <h2 className={styles.card_infos__nome}>
-                                    Dunga
-                                </h2>
-
-                                <ul className={styles.card_infos__infos}>
-                                    <li>2 anos</li>
-                                    <li>Porte pequeno</li>
-                                    <li>Calmo e educado</li>
-                                </ul>
-                            </section>
-
-                            <section>
-                                <address className={styles.card_contato__endereco}>
-                                    Rio de Janeiro (RJ)
-                                </address>
-                                <Link className={styles.card_contato__link} to="">
-                                    Falar com responsável
-                                </Link>
-                            </section>
-
-                        </article>
-                    </li>
-
-                    <li>
-                        <article className={styles.pet_card}>
-                            <div className={styles.card_image}>
-                                <img src={imagemTest} alt="" />
-                            </div>
-                            <section className={styles.card_infos}>
-                                <h2 className={styles.card_infos__nome}>
-                                    Dunga
-                                </h2>
-
-                                <ul className={styles.card_infos__infos}>
-                                    <li>2 anos</li>
-                                    <li>Porte pequeno</li>
-                                    <li>Calmo e educado</li>
-                                </ul>
-                            </section>
-
-                            <section>
-                                <address className={styles.card_contato__endereco}>
-                                    Rio de Janeiro (RJ)
-                                </address>
-                                <Link className={styles.card_contato__link} to="">
-                                    Falar com responsável
-                                </Link>
-                            </section>
-
-                        </article>
-                    </li>
-
-                    <li>
-                        <article className={styles.pet_card}>
-                            <div className={styles.card_image}>
-                                <img src={imagemTest} alt="" />
-                            </div>
-                            <section className={styles.card_infos}>
-                                <h2 className={styles.card_infos__nome}>
-                                    Dunga
-                                </h2>
-
-                                <ul className={styles.card_infos__infos}>
-                                    <li>2 anos</li>
-                                    <li>Porte pequeno</li>
-                                    <li>Calmo e educado</li>
-                                </ul>
-                            </section>
-
-                            <section>
-                                <address className={styles.card_contato__endereco}>
-                                    Rio de Janeiro (RJ)
-                                </address>
-                                <Link className={styles.card_contato__link} to="">
-                                    Falar com responsável
-                                </Link>
-                            </section>
-
-                        </article>
-                    </li>
+                    {
+                        pets &&
+                        pets.map(petInfo => (
+                            <PetCard
+                                key={petInfo.id}
+                                img={petInfo.img}
+                                nome={petInfo.nome}
+                                idade={petInfo.idade}
+                                porte={petInfo.porte}
+                                descricao={petInfo.descricao}
+                                localizacao={petInfo.localizacao}
+                            />
+                        ))
+                    }
                 </ul>
             </section>
         </main>

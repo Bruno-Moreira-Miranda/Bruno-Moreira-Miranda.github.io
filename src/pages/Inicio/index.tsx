@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 
+import useSetTitle from "Hooks/useSetTitle";
+import useSetBodyClass from "Hooks/useSetBodyClass";
 import Logo from "components/UI/Logo";
 
 import styles from "./Inicio.module.css";
-import AppRoutes from "components/root/Routes/AppRoutes";
+import AppRoutes, { AppPaths } from "Routes/AppRoutes";
 
 function Inicio() {
+    useSetTitle("Início");
+    useSetBodyClass(styles.inicio_bg);
+
     return (
         <main className={classNames(styles.inicio, "container-main", "padding-v-main")}>
             <Logo className={styles.logo} />
@@ -23,14 +28,14 @@ function Inicio() {
 
             <Link
                 className={classNames(styles.loginButton, "button", "button_m")}
-                to={AppRoutes.login}
+                to={AppPaths.login}
                 role="button">
                 Já tenho conta
             </Link>
             
             <Link
                 className={classNames(styles.cadastrarButton, "button", "button_m")}
-                to={AppRoutes.cadastro}
+                to={AppPaths.cadastro}
                 role="button">
                 Quero me cadastrar
             </Link>
