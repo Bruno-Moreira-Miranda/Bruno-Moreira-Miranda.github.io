@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Bruno-Moreira-Miranda/Bruno-Moreira-Miranda.github.io/static/css/main.f31f2630.css",
+    "main.js": "/Bruno-Moreira-Miranda/Bruno-Moreira-Miranda.github.io/static/js/main.c45e4ad8.js",
+    "static/media/Ilustração-1.png": "/Bruno-Moreira-Miranda/Bruno-Moreira-Miranda.github.io/static/media/Ilustração-1.c06d01d9e5693dd42bab.png",
+    "static/media/patas.png": "/Bruno-Moreira-Miranda/Bruno-Moreira-Miranda.github.io/static/media/patas.10a6e47bcaf77bfb7a2e.png",
+    "index.html": "/Bruno-Moreira-Miranda/Bruno-Moreira-Miranda.github.io/index.html",
+    "main.f31f2630.css.map": "/Bruno-Moreira-Miranda/Bruno-Moreira-Miranda.github.io/static/css/main.f31f2630.css.map",
+    "main.c45e4ad8.js.map": "/Bruno-Moreira-Miranda/Bruno-Moreira-Miranda.github.io/static/js/main.c45e4ad8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f31f2630.css",
+    "static/js/main.c45e4ad8.js"
+  ]
+}
