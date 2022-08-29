@@ -1,0 +1,60 @@
+body {
+    --bg-1-img-path: url("/public/assets/patas.png");
+    --bg-2-img-path: url("/public/assets/forma-2.png");
+    --bg-3-img-path: url("/public/assets/forma-4.png");
+    --bg-4-img-path: url("/public/assets/forma-1.png");
+    --bg-img-path-bundle:
+        var(--bg-1-img-path),
+        var(--bg-2-img-path),
+        var(--bg-3-img-path),
+        var(--bg-4-img-path);
+
+    --bg-1-pos: top right;
+    --bg-2-pos: top left;
+    --bg-3-pos: 0 22rem;
+    --bg-4-pos: top left;
+    --bg-pos-bundle:
+        var(--bg-1-pos),
+        var(--bg-2-pos),
+        var(--bg-3-pos),
+        var(--bg-4-pos);
+
+    --bg-1-size: 10.5rem auto;
+    --bg-2-size: auto;
+    --bg-3-size: auto;
+    --bg-4-size: auto;
+    --bg-size-bundle:
+        var(--bg-1-size),
+        var(--bg-2-size),
+        var(--bg-3-size),
+        var(--bg-4-size)
+}
+
+body {
+    background-image: var(--bg-img-path-bundle);
+    background-repeat: no-repeat;
+    background-position: var(--bg-pos-bundle);
+    background-size: var(--bg-size-bundle);
+
+    background-color: rgb(255, 255, 255);
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    body {
+        --bg-2-img-path: url("/public/assets/forma-2-tablet.png");
+        --bg-3-img-path: url("/public/assets/forma-3-tablet.png");
+        --bg-4-img-path: url("/public/assets/forma-1-tablet.png");
+
+        --bg-3-pos: center right;
+
+        --bg-1-size: 17.25rem;
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1440px) {
+    body {
+        --bg-1-size: 19.25rem;
+    }
+}

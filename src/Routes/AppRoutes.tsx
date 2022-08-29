@@ -6,7 +6,7 @@ import Login from "pages/Login";
 import Home from "pages/Home";
 import Contato from "pages/Contato";
 import Perfil from "pages/Perfil";
-import LogedRoute from "./LogedRoute";
+import LogedRoute from "./custom-route/LogedRoute";
 
 enum AppPaths {
     inicio = "/",

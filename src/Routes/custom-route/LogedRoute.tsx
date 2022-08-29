@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 
 import { useGetUserID } from "context/user-context";
 
-import { AppPaths } from "./AppRoutes";
+import { AppPaths } from "../AppRoutes";
 
 function LogedRoute() {
     const navegacao = useNavigate();

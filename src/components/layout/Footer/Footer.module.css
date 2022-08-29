@@ -1,0 +1,16 @@
+.footer {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    background-color: var(--cor-secundaria);
+
+    text-align: center;
+}
+
+/*Desktop*/
+@media screen and (min-width: 1440px) {
+    .footer {
+        padding-top: 1.875rem;
+        padding-bottom: 1.875rem;
+    }
+}

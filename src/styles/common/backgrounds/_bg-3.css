@@ -1,0 +1,24 @@
+body {
+    --bg-1-img-path: url(/public/assets/forma-1.png);
+    --bg-2-img-path: url(/public/assets/forma-2.png);
+    --bg-img-bundle: 
+        var(--bg-1-img-path),
+        var(--bg-2-img-path)
+}
+
+body {
+    background-image: var(--bg-img-bundle);
+
+    background-repeat: no-repeat;
+    background-position: top left, top left;
+    
+    background-color: rgb(255, 255, 255);
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    body {
+        --bg-1-img-path: url(/public/assets/forma-1-tablet.png);
+        --bg-2-img-path: url(/public/assets/forma-2-tablet.png);
+    }
+}
