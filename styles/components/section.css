@@ -1,0 +1,74 @@
+.section {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.section--pb-1 {
+    padding-bottom: 5rem;
+}
+
+.section__title {
+    font-size: 3rem;
+    text-shadow: 
+    1px 1px 0px var(--section-p-clr),
+    -1px -1px 0px var(--section-p-clr),
+    -1px 1px 0px var(--section-p-clr),
+    1px -1px 0px var(--section-p-clr);
+    
+    color: var(--section-p-bg-clr);
+}
+
+.section__title::before {
+    content: "//";
+
+    margin-right: .5rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.section__text {
+    width: 50%;
+
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+.section-p {
+    --section-p-clr: var(--clr-1); /*necessario para o "section-title"*/
+    --section-p-bg-clr: var(--clr-4); /*necessario para o "section-title"*/
+
+    color: var(--section-p-clr);
+    background-color: var(--section-p-bg-clr);
+}
+
+.section-p--theme-1 {
+    --section-p-clr: var(--clr-2);
+}
+
+.section-p--theme-2 {
+    --section-p-clr: var(--clr-1)
+}
+
+.section-s {
+    background-color: var(--clr-2);
+}
+
+@media screen and (max-width: 768px) { 
+    .section__title {
+        font-size: 2.5rem;
+    }
+
+    .section__text {
+        width: 65%;
+    }
+} 
+
+@media screen and (max-width: 425px) {
+    .section__title {
+       font-size: 2rem;
+    }
+
+    .section__text {
+        width: 100%;
+    }
+}

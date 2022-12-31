@@ -1,0 +1,158 @@
+.main {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    height: 25.5rem;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    background-color: var(--clr-1);
+}
+
+.main > * {
+    z-index: 1;
+}
+
+.main > :nth-child(2) {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.main__edge {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.main-bg {
+    top: 0;
+    left: 0;
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    
+    user-select: none;
+    
+    z-index: -1;
+}
+
+.main-bg__chunk {
+    position: absolute;
+    --f-aux: 25vw;
+    --f: min(calc((100vw - var(--container) - var(--f-aux)) / var(--font-ratio)), calc(100vh - 5rem));
+}
+
+.main-bg__chunk-1 {
+    color: var(--clr-1);
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: var(--f);
+
+    text-shadow: 
+    1px 1px 0px var(--clr-4),
+    -1px -1px 0px var(--clr-4),
+    -1px 1px 0px var(--clr-4),
+    1px -1px 0px var(--clr-4);
+}
+
+.main-bg__chunk-2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + .68em * var(--font-ratio)), calc(-50% + .8em));
+
+    font-size: calc(var(--f) / 2.25);
+}
+
+.main-nav {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.main-nav__links {
+    display: flex;
+
+    column-gap: 1rem;
+}
+
+.main__deco {
+    height: 1px;
+    width: 100%;    
+    
+    background-color: var(--clr-4);
+}
+
+.main-text-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-text-1__text-1 {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.25rem;
+
+    margin-bottom: 1rem;
+}
+
+.main-text-1__text-2 {
+    font-size: 3rem;
+    color: var(--clr-3);
+}
+
+.main-text-2 {
+    font-size: 1.25rem;
+}
+
+.main-text-2 > * {
+    display: block;
+    width: max-content;
+}
+
+@media screen and (max-width: 768px) {
+    .main-bg__chunk {
+        --f-aux: 15vw;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main__deco {
+        display: none;
+    }
+
+    .main-nav {
+        width: 100%;
+        border-bottom: 1px solid var(--clr-4);
+    }
+
+    .main-nav__links {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main-bg {
+        rotate: 90deg;
+    }
+
+    .main-bg__chunk {
+        top: 27%;
+        left: 55%;
+    }
+
+    .main-text-1__text-2 {
+        border-bottom: 1px solid var(clr-4);
+    }
+} 

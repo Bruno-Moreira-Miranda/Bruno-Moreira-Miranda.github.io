@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+:root {
+    --font-ratio: 1.845;
+    --font-height: 16px;
+    --font-scale: 1.55;
+    --font-size: calc(var(--font-height) * var(--font-scale));
+
+    font-size: var(--font-size);
+}
+
+html {
+    font-family: "Odibee Sans", sans-serif;
+}
+
+* {
+    letter-spacing: .1em;
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --font-scale: 1.35;
+    }
+}
+
+@media screen and (max-width: 768px){
+    :root {
+        --font-scale: 1.15;
+    }
+}

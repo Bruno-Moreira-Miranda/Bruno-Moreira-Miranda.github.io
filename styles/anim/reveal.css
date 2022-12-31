@@ -1,0 +1,19 @@
+.anim-reveal {
+    opacity: 0;
+    transition: .75s linear;
+}
+
+.anim-reveal-children {
+    opacity: unset;
+    transition: unset;
+}
+
+.anim-reveal-children > * {
+    opacity: 0;
+    transition: 1s linear;
+}
+
+.anim-reveal--show,
+.anim-reveal--show.anim-reveal-children > * {
+    opacity: 1;
+}

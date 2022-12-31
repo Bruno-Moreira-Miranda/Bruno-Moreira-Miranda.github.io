@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Portifólio - Bruno Moreira Miranda</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <script type="module" src="js/index.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header class="main container">
+            <div class="main__edge">
+                <span class="main__deco"></span>
+                <nav class="main-nav">
+                    <ul class="main-nav__links">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div>
+                <span class="main-bg">
+                    <span class="main-bg__chunk main-bg__chunk-1">
+                        Hello
+                    </span>
+                    <span class="main-bg__chunk main-bg__chunk-2">
+                        Word!
+                    </span>
+                </span>
+                <p class="main-text-1">
+                    <em class="main-text-1__text-1">
+                        <span>Olá</span>
+                        <span>me chamo</span>
+                    </em>
+                    <strong class="main-text-1__text-2">
+                        Bruno Moreira Miranda
+                    </strong>
+                </p>
+            </div>
+
+            <div class="main__edge">
+                <p class="main-text-2">
+                    <span>Sou um</span>
+                    <span>Front-end developer</span>
+                </p>
+                <span class="main__deco"></span>
+            </div>
+
+        </header>
+        <section class="section section-p section-p--theme-1 container anim-reveal anim-reveal-children" id="sobre">
+            <h2 class="section__title">Sobre min</h2>
+            <p class="section__text">
+                Sou o Bruno Moreira Miranda, Front-end Web developer e
+                eu adoro transformar ideias em algo real e funcional que outras
+                pessoas possam utilizar. Gosto e procuro sempre melhorar este processo, por isso,
+                continuamente estou adquirindo novos conhecimentos e aprendendo novas tecnologias para
+                obter o melhor resultado.
+            </p>
+        </section>
+        <section class="section section-p section--pb-1 section-p--theme-2 container anim-reveal anim-reveal-children"
+            id="habilidades">
+            <h2 class="section__title">Habilidades</h2>
+            <ul class="habilidades-list">
+                <!--html igm-->
+                <li class="img-container">
+                    <img src="assets/html-5.png" alt="HTML">
+                </li>
+                <!-- css img -->
+                <li class="img-container">
+                    <img src="assets/css-3.png" alt="CSS">
+                </li>
+                <!-- js img -->
+                <li class="img-container">
+                    <img src="assets/js.png" alt="Javascript">
+                </li>
+                <!-- typescript img -->
+                <li class="img-container">
+                    <img src="assets/ts.png" alt="Typescript">
+                </li>
+                <!-- react img -->
+                <li class="img-container">
+                    <img src="assets/react.png" alt="React">
+                </li>
+                <!-- git img -->
+                <li class="img-container">
+                    <img src="assets/git.png" alt="Git">
+                </li>
+            </ul>
+        </section>
+        <section class="section section-s container" id="projetos">
+            <h2 class="section__title">Projetos</h2>
+            <article class="projeto">
+                <div class="projeto__title-shell">
+                    <h1 class="projeto__title">Alurageek</h1>
+                </div>
+                <div class="projeto__img">
+                    <img src="assets/AluraGeek.png" alt="">
+                </div>
+                <section class="projeto__desc-section">
+                    <h2 class="projeto__desc-word">Descrição</h2>
+                    <p class="projeto__desc-content">
+                        Projeto de um E-commerce de produtos Geek/Nerd. Onde é possivel visualizar, pesquisar por nome e
+                        ver por categoria; além de possuir sistema login para administradores, que podem adicionar,
+                        remover e editar produtos. O projeto foi feito com o React, Typescript e vanilla CSS.
+                        Foram utilizados bibliotecas como: react-router-dom, para as rotas; mirajejs, para simular um
+                        backend; e CSS modules para ajudar na estilização dos componentes.
+                    </p>
+                </section>
+                <div class="projeto__links">
+                    <a href="https://bruno-moreira-miranda.github.io/alurageek/" target="_blank">Ver</a>
+                    <a href="https://github.com/Bruno-Moreira-Miranda/alurageek" target="_blank">Código</a>
+                    <span></span>
+                </div>
+            </article>
+            <article class="projeto">
+                <div class="projeto__title-shell">
+                    <h1 class="projeto__title">Portifólio</h1>
+                </div>
+                <div class="projeto__img">
+                    <img src="assets/Portifolio.png" alt="">
+                </div>
+                <section class="projeto__desc-section">
+                    <h2 class="projeto__desc-word">Descrição</h2>
+                    <p class="projeto__desc-content">
+                        Este site <i>:)</i>.
+                    </p>
+                </section>
+                <div class="projeto__links">
+                    <a href="https://bruno-moreira-miranda.github.io" target="_blank">Ver</a>
+                    <a href="https://github.com/Bruno-Moreira-Miranda/Bruno-Moreira-Miranda.github.io" target="_blank">Código</a>
+                    <span></span>
+                </div>
+            </article>
+        </section>
+        <footer class="footer container" id="contato">
+            <h2 class="footer__title">Contato</h2>
+            <ul class="footer__contato">
+                <li><a href="mailto:brunomoreiramiranda364@gmail.com">brunomoreiramiranda364@gmail.com</a></li>
+                <li><a href="https://github.com/Bruno-Moreira-Miranda" target="_blank">Bruno-Moreira-Miranda -
+                        Github</a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+
+</html>
