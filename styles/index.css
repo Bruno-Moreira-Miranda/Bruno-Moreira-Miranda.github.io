@@ -1,13 +1,13 @@
-@import "base/_bundle.css";
+@import "base/bundle.css";
 
-@import "vars/_bundle.css";
+@import "vars/bundle.css";
 
-@import "layout/_bundle.css";
+@import "layout/bundle.css";
 
-@import "sections/_bundle.css";
+@import "sections/bundle.css";
 
-@import "components/_bundle.css";
+@import "components/bundle.css";
 
 @import "utils.css";
 
-@import "anim/_bundle.css";
+@import "anim/bundle.css";
